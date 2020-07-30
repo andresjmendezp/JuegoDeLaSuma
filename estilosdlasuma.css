@@ -38,3 +38,16 @@ body
 {
     font-size: 20px;
 }
+
+#container2
+{
+    width: 70%;
+    padding: 1em;
+    text-align:center;
+    border: 5px solid black;
+    margin: 20 auto;
+ }
+#container input
+{
+    font-size: 40px;
+}

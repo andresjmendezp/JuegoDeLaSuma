@@ -57,6 +57,8 @@ var nueve={
 
 x=aleatorio(1,9);
 y=aleatorio(1,9);
+var z=x+y;
+var r;
 
 mas.imagen=new Image();
 mas.imagen.src=mas.url;
@@ -147,6 +149,11 @@ if(y==6){
   }
 
 mas.imagen.addEventListener("load",dibujarmas);
+
+var b=document.getElementById("responder");
+b.addEventListener("click",calcular);
+
+
 
 function cargaruno()
 {
@@ -268,8 +275,7 @@ function dibujar2(n){
 }
 
 function dibujarmas()
-{
-  console.log("se dibuja mas")    
+{ 
   papel.drawImage(mas.imagen,520,220);
 }
 
@@ -293,4 +299,21 @@ function aleatorio(min,maxi)
   var resultado;
   resultado= Math.floor(Math.random()*(maxi-min+1))+min;
   return resultado;
+}
+
+function calcular ()
+{
+  var t=document.getElementById("respuesta");
+  r=parseInt(t.value);
+  console.log("La respuesta es ", r);
+if(r==z)
+{
+  alert("La respuesta es correcta");
+}
+else{
+  alert("La respuesta es incorrecta");
+  var b=document.getElementById("responder");
+  b.addEventListener("click",calcular);
+}
+
 }
