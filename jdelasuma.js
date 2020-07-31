@@ -68,8 +68,8 @@ var incorrecto={
 
 
 
-x=aleatorio(9,9);
-y=aleatorio(3,9);
+x=aleatorio(1,9);
+y=aleatorio(1,9);
 var z=x+y;
 var r;
 
@@ -169,8 +169,6 @@ if(y==6){
 
 mas.imagen.addEventListener("load",dibujarmas);
 
-var b=document.getElementById("responder");
-b.addEventListener("click",calcular);
 
 function cargaruno()
 {
