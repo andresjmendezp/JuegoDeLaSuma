@@ -41,7 +41,7 @@ body
 
 #container2
 {
-    width: 70%;
+    width: 75%;
     padding: 1em;
     text-align:center;
     border: 5px solid black;
@@ -49,5 +49,5 @@ body
  }
 #container input
 {
-    font-size: 40px;
+    font-size: 50px;
 }

@@ -16,6 +16,7 @@ var uno={
     url:"uno.png",
     cargaOk: false
 }
+
 var dos={
   url:"dos.png",
   cargaOk: false
@@ -55,8 +56,20 @@ var nueve={
   cargaOk: false
 }
 
-x=aleatorio(1,9);
-y=aleatorio(1,9);
+var correcto={
+  url:"correcto.png",
+  cargaOk: false
+}
+
+var incorrecto={
+  url:"incorrecto.png",
+  cargaOk: false
+}
+
+
+
+x=aleatorio(9,9);
+y=aleatorio(3,9);
 var z=x+y;
 var r;
 
@@ -90,6 +103,12 @@ ocho.imagen.src=ocho.url;
 
 nueve.imagen=new Image();
 nueve.imagen.src=nueve.url;
+
+correcto.imagen=new Image();
+correcto.imagen.src=correcto.url;
+
+incorrecto.imagen=new Image();
+incorrecto.imagen.src=incorrecto.url;
 
 
 if(x==1){
@@ -152,8 +171,6 @@ mas.imagen.addEventListener("load",dibujarmas);
 
 var b=document.getElementById("responder");
 b.addEventListener("click",calcular);
-
-
 
 function cargaruno()
 {
@@ -308,10 +325,35 @@ function calcular ()
   console.log("La respuesta es ", r);
 if(r==z)
 {
-  alert("La respuesta es correcta");
+  var aud =new Audio ("correcto.m4a");
+  aud.play();
+  Swal .fire({
+    title:"Correcto!!!",
+    text:"Eres el mejor en el juego de la suma",
+    icon:"success",
+    backdrop:true,
+    timer:5000,
+    imageUrl:"correcto.PNG"
+  });
+ // papel.drawImage(correcto.imagen,520,120);
+  
+  var b=document.getElementById("responder");
+  b.addEventListener("click",calcular);
+
 }
 else{
-  alert("La respuesta es incorrecta");
+  var aud =new Audio ("equivocado.m4a");
+  aud.play();
+  Swal .fire({
+    title:"Incorrecto",
+    text:"Vuelve a intentarlo",
+    icon:"error",
+    backdrop:true,
+    timer:6000,
+    imageUrl:"incorrecto.png"
+  });
+  //papel.drawImage(incorrecto.imagen,520,120);
+  
   var b=document.getElementById("responder");
   b.addEventListener("click",calcular);
 }
