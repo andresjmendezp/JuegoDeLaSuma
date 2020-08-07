@@ -1,3 +1,4 @@
+
 var vp = document.getElementById("tablero");
 var papel = vp.getContext("2d");
 
@@ -68,6 +69,7 @@ var incorrecto = {
 x = aleatorio(1, 9);
 y = aleatorio(1, 9);
 var z = x + y;
+
 var r;
 
 mas.imagen = new Image();
@@ -104,11 +106,13 @@ nueve.imagen.src = nueve.url;
 correcto.imagen = new Image();
 correcto.imagen.src = correcto.url;
 
+
 incorrecto.imagen = new Image();
 incorrecto.imagen.src = incorrecto.url;
 
 if (x == 1) {
   uno.imagen.addEventListener("load", cargaruno);
+
 }
 if (x == 2) {
   dos.imagen.addEventListener("load", cargardos);
@@ -259,6 +263,7 @@ function dibujar2(n) {
 
 function dibujarmas() {
   papel.drawImage(mas.imagen, 520, 220);
+
 }
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo) {
@@ -277,6 +282,7 @@ function aleatorio(min, maxi) {
   resultado = Math.floor(Math.random() * (maxi - min + 1)) + min;
   return resultado;
 }
+
 
 function calcular() {
   var t = document.getElementById("respuesta");
@@ -314,3 +320,4 @@ function calcular() {
     b.addEventListener("click", calcular);
   }
 }
+
