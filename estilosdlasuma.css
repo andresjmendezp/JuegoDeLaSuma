@@ -1,53 +1,56 @@
-body
-{
-    color: black;
-    text-align: left;
-    font-family: "Arial";
-    font-size: 14px;
-    margin:0;
-    padding:0;
-}
-#Cabecera
-{
-    background: #33A;
-    color: white;
-    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.5);
-    margin:5;
-    font-weight: bold;
-    padding:0.5em;
-    font-size: 2.5em;
+body {
+  color: black;
+  font-family: "Arial";
 }
 
-#Cabecera #Tagline
-{
-    font-weight: normal;
-    padding: 0 0 0 1em;
-    font-size: 1em;
+#container {
+  width: auto;
+  height: auto;
+  padding: 1em;
+  border: 1px solid black;
 }
 
-#container
-{
-    width: 70%;
-    padding: 1em;
-    text-align:left;
-    border: 1px solid black;
-    margin: 20 auto;
-    height: 90%;
- }
-#container h1
-{
-    font-size: 20px;
+#cabecera {
+  background: #33a;
+  color: white;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+  width: 75%;
+  margin: auto;
+  padding: 0.5em;
+  font-weight: normal;
+  text-align: center;
 }
 
-#container2
-{
-    width: 75%;
-    padding: 1em;
-    text-align:center;
-    border: 5px solid black;
-    margin: 20 auto;
- }
-#container input
-{
-    font-size: 50px;
+#cabecera h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#cabecera p {
+  font-size: 2em;
+}
+
+#post {
+  font-size: 2em;
+}
+
+#container2 {
+  width: 75%;
+  padding: 1em;
+  text-align: center;
+  margin: auto;
+}
+
+#resultado {
+  width: 80%;
+  height: 20%;
+  font-size: 4em;
+  text-align: center;
+}
+
+#responder {
+  margin: 1em;
+  font-size: 50px;
+  width: 400px;
+  height: 100px;
 }
