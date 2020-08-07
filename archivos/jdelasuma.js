@@ -2,15 +2,10 @@
 var vp= document.getElementById("Tablero");
 var papel= vp.getContext("2d");
 
-
-// aca hacemos un marco para el lienzo donde se va incluir los numeros
 dibujarLinea("blue",0,0,1300,0,papel);
 dibujarLinea("blue",1300,0,1300,600,papel);
 dibujarLinea("blue",1300,600,0,600,papel);
 dibujarLinea("blue",0,600,0,0,papel);
-
-// Hay 3 objetos a mostrar en el liezo, numero1, el signo mas y el numero 2
-// para esto creamos cada numero del 1 al 9 como una variable que es un diccionario que tiene una url y estatus de carga
 
 var mas={
   url:"mas.png",
@@ -115,8 +110,7 @@ correcto.imagen.src=correcto.url;
 incorrecto.imagen=new Image();
 incorrecto.imagen.src=incorrecto.url;
 
-// aca es donde el codigo es ineficiente porque cada numero tiene su funcion de carga, intente hacer una funcion de carga general
-// pero no me corrio.
+
 if(x==1){
 uno.imagen.addEventListener("load",cargaruno);
 }
@@ -279,7 +273,7 @@ function cargarnueve1()
 }
 
 
-// con esta funcion se dibuja el primer numero
+
 function dibujar1(n){
     if (n.cargaOk)
     {
@@ -288,8 +282,6 @@ function dibujar1(n){
     
     }
 }
-
-// con esta funcion se dibuja el segundo numero
 function dibujar2(n){
   if (n.cargaOk)
   {
@@ -297,7 +289,6 @@ function dibujar2(n){
   }
 }
 
-// con esta funcion se dibuja el signo mas
 function dibujarmas()
 { 
   papel.drawImage(mas.imagen,520,220);
@@ -325,9 +316,6 @@ function aleatorio(min,maxi)
   return resultado;
 }
 
-// lo mejor que tiene este codigo es esta funcion; aca te dice si se respondio correctamente o no
-// y se carga una en una alerta con la funcion sweetalert (Swal) con una imagen diferente cuando
-// se responde correctamente o no.
 function calcular ()
 {
   var t=document.getElementById("respuesta");
@@ -345,7 +333,7 @@ if(r==z)
     timer:5000,
     imageUrl:"correcto.PNG"
   });
-
+ // papel.drawImage(correcto.imagen,520,120);
   
   var b=document.getElementById("responder");
   b.addEventListener("click",calcular);
@@ -362,7 +350,7 @@ else{
     timer:6000,
     imageUrl:"incorrecto.png"
   });
-
+  //papel.drawImage(incorrecto.imagen,520,120);
   
   var b=document.getElementById("responder");
   b.addEventListener("click",calcular);
