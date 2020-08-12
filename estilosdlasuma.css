@@ -1,10 +1,11 @@
 body {
   color: black;
   font-family: "Arial";
+  text-align: center;
 }
 
 #container {
-  width: auto;
+  width: auto%;
   height: auto;
   padding: 1em;
   border: 1px solid black;
@@ -28,10 +29,13 @@ body {
 
 #cabecera p {
   font-size: 2em;
+  
 }
 
 #post {
   font-size: 2em;
+  padding: 0.5em;
+  text-align: center;
 }
 
 #container2 {
@@ -42,8 +46,8 @@ body {
 }
 
 #respuesta {
-  width: 80%;
-  height: 20%;
+  width: 60%;
+  height: 5%;
   font-size: 4em;
   text-align: center;
 }
