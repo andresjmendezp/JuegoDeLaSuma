@@ -288,22 +288,21 @@ function calcular() {
   var t = document.getElementById("respuesta");
   r = parseInt(t.value);
   console.log("La respuesta es ", r);
-  if (r == z) {
-    var aud = new Audio("correcto.m4a");
-    aud.play();
-    Swal.fire({
-      title: "Correcto!!!",
-      text: "Eres el mejor en el juego de la suma",
-      icon: "success",
-      backdrop: true,
-      timer: 5000,
-      imageUrl: "correcto.PNG",
-    });
-    // papel.drawImage(correcto.imagen,520,120);
-
-    var b = document.getElementById("responder");
-    b.addEventListener("click", calcular);
-  } else {
+  if (r == z)
+  {
+      var aud = new Audio("correcto.m4a");
+      aud.play();
+      Swal.fire(
+      {
+        title: "Correcto!!!",
+        text: "Eres el mejor en el juego de la suma",
+        icon: "success",
+        backdrop: true,
+        imageUrl: "correcto.PNG",
+        allowOutsideClick:false,
+      });
+  }
+  if(r!=z) {
     var aud = new Audio("equivocado.m4a");
     aud.play();
     Swal.fire({
@@ -314,7 +313,6 @@ function calcular() {
       timer: 6000,
       imageUrl: "incorrecto.png",
     });
-    //papel.drawImage(incorrecto.imagen,520,120);
 
     var b = document.getElementById("responder");
     b.addEventListener("click", calcular);

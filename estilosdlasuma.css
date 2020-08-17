@@ -58,3 +58,10 @@ body {
   width: 400px;
   height: 100px;
 }
+
+#refresh {
+  margin: 1em;
+  font-size: 50px;
+  width: 400px;
+  height: 100px;
+}
