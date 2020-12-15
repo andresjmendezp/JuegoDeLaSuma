@@ -2,6 +2,7 @@
 var vp = document.getElementById("tablero");
 var papel = vp.getContext("2d");
 
+
 dibujarLinea("black", 0, 0, 1300, 0, papel);
 dibujarLinea("blue", 1300, 0, 1300, 600, papel);
 dibujarLinea("blue", 1300, 600, 0, 600, papel);
