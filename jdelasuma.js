@@ -269,7 +269,7 @@ function dibujarmas() {
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo) {
   lienzo.beginPath();
   lienzo.strokeStyle = color;
-  lienzo.lineWidth = 2;
+  lienzo.lineWidth = 20;
   lienzo.moveTo(xinicial, yinicial);
   lienzo.lineTo(xfinal, yfinal);
   lienzo.lineTo(xfinal, yfinal);
