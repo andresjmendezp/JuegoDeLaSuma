@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>JUEGO DE LA SUMA</title>
+    <link rel="stylesheet" href="estilosdlasuma.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="cabecera">
+        <h1>ESTE ES EL JUEGO DE LA SUMA</h1>
+        <p>Vamos a aprender a sumar</p>
+      </div>
+
+      <p id="post">
+        Aparecen dos numeros en la pantalla, vamos a ver cuantas veces puedes
+        dar la respuesta correcta:
+      </p>
+
+      <canvas width="1300" height="600" id="tablero"></canvas>
+      <div id="container2">
+        <input
+          type="number"
+          id="respuesta"
+          onkeypress="if (event.keyCode == 13)
+              document.getElementById('responder').click()"
+        />
+        <br />
+        <input
+          type="button"
+          value="Responder"
+          id="responder"
+          onclick="calcular();"
+        />
+        <input
+          type="button"
+          value="Otra Suma"
+          id="refresh"
+          onclick="location.reload();"
+        />
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="jdelasuma.js"></script>
+  </body>
+</html>

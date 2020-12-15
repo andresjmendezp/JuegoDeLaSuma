@@ -1,0 +1,67 @@
+body {
+  color: black;
+  font-family: "Arial";
+  text-align: center;
+}
+
+#container {
+  width: auto%;
+  height: auto;
+  padding: 1em;
+  
+}
+
+#cabecera {
+  background: #33a;
+  color: white;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+  width: 75%;
+  margin: auto;
+  padding: 0.5em;
+  font-weight: normal;
+  text-align: center;
+}
+
+#cabecera h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#cabecera p {
+  font-size: 2em;
+  
+}
+
+#post {
+  font-size: 2em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+#container2 {
+  width: 75%;
+  padding: 1em;
+  text-align: center;
+  margin: auto;
+}
+
+#respuesta {
+  width: 60%;
+  height: 5%;
+  font-size: 4em;
+  text-align: center;
+}
+
+#responder {
+  margin: 1em;
+  font-size: 50px;
+  width: 400px;
+  height: 100px;
+}
+
+#refresh {
+  margin: 1em;
+  font-size: 50px;
+  width: 400px;
+  height: 100px;
+}
