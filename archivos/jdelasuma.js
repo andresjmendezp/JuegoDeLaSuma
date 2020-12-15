@@ -4,10 +4,10 @@ var papel= vp.getContext("2d");
 
 
 // aca hacemos un marco para el lienzo donde se va incluir los numeros
-dibujarLinea("blue",0,0,1300,0,papel);
+dibujarLinea("black",0,0,1300,0,papel);
 dibujarLinea("blue",1300,0,1300,600,papel);
 dibujarLinea("blue",1300,600,0,600,papel);
-dibujarLinea("blue",0,600,0,0,papel);
+dibujarLinea("black",0,600,0,0,papel);
 
 // Hay 3 objetos a mostrar en el liezo, numero1, el signo mas y el numero 2
 // para esto creamos cada numero del 1 al 9 como una variable que es un diccionario que tiene una url y estatus de carga
@@ -308,7 +308,7 @@ function dibujarLinea(color,xinicial,yinicial,xfinal,yfinal,lienzo)
 {
   lienzo.beginPath();
   lienzo.strokeStyle=color;
-  lienzo.lineWidth=2;
+  lienzo.lineWidth=12;
   lienzo.moveTo(xinicial,yinicial);
   lienzo.lineTo(xfinal,yfinal);
   lienzo.lineTo(xfinal,yfinal);
