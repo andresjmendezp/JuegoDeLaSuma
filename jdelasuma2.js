@@ -3,16 +3,25 @@ var vp = document.getElementById("tablero");
 var papel = vp.getContext("2d");
 
 
-dibujarLinea("black", 0, 0, 1300, 0, papel);
+dibujarLinea("blue", 0, 0, 1300, 0, papel);
 dibujarLinea("blue", 1300, 0, 1300, 600, papel);
 dibujarLinea("blue", 1300, 600, 0, 600, papel);
-dibujarLinea("black", 0, 600, 0, 0, papel);
+dibujarLinea("blue", 0, 600, 0, 0, papel);
 
 var mas = {
   url: "mas.png",
   cargaOk: false,
 };
 
+var menos = {
+  url: "menos.png",
+  cargaOk: false,
+};
+
+var signo = {
+  url: "mas.png",
+  cargaOk: false,
+};
 var uno = {
   url: "uno.png",
   cargaOk: false,
@@ -68,14 +77,26 @@ var incorrecto = {
 };
 
 x = aleatorio(1, 9);
-y = aleatorio(1, 9);
-var z = x + y;
+y = aleatorio(1, x-1);
 
 var r;
 
-mas.imagen = new Image();
-mas.imagen.src = mas.url;
-mas.cargaOk = true;
+sig=aleatorio(0,1)
+
+if(sig==0){
+  signo.imagen = new Image();
+  signo.imagen.src = mas.url;
+  signo.cargaOk = true;
+  var z = x + y;
+}
+if(sig==1){
+  signo.imagen = new Image();
+  signo.imagen.src = menos.url;
+  signo.cargaOk = true;
+  var z = x - y;
+}
+
+
 
 uno.imagen = new Image();
 uno.imagen.src = uno.url;
@@ -168,7 +189,7 @@ if (y == 9) {
   nueve.imagen.addEventListener("load", cargarnueve1);
 }
 
-mas.imagen.addEventListener("load", dibujarmas);
+signo.imagen.addEventListener("load", dibujarmas);
 
 function cargaruno() {
   uno.cargaOk = true;
@@ -263,7 +284,7 @@ function dibujar2(n) {
 }
 
 function dibujarmas() {
-  papel.drawImage(mas.imagen, 520, 220);
+  papel.drawImage(signo.imagen, 520, 220);
 
 }
 
