@@ -14,7 +14,7 @@ var mas = {
 };
 
 var menos = {
-  url: "menos.png",
+  url: "menos.PNG",
   cargaOk: false,
 };
 
