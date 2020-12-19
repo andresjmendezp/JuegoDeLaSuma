@@ -14,7 +14,7 @@ var mas = {
 };
 
 var menos = {
-  url: "menos.png",
+  url: "menos.PNG",
   cargaOk: false,
 };
 
@@ -80,23 +80,15 @@ x = aleatorio(1, 9);
 y = aleatorio(1, x-1);
 
 var r;
+var z;
 
 sig=aleatorio(0,1)
 
-if(sig==0){
-  signo.imagen = new Image();
-  signo.imagen.src = mas.url;
-  signo.cargaOk = true;
-  var z = x + y;
-}
-if(sig==1){
-  signo.imagen = new Image();
-  signo.imagen.src = menos.url;
-  signo.cargaOk = true;
-  var z = x - y;
-}
+mas.imagen = new Image();
+mas.imagen.src = mas.url;
 
-
+menos.imagen = new Image();
+menos.imagen.src = menos.url;
 
 uno.imagen = new Image();
 uno.imagen.src = uno.url;
@@ -131,6 +123,8 @@ correcto.imagen.src = correcto.url;
 
 incorrecto.imagen = new Image();
 incorrecto.imagen.src = incorrecto.url;
+
+
 
 if (x == 1) {
   uno.imagen.addEventListener("load", cargaruno);
@@ -189,8 +183,14 @@ if (y == 9) {
   nueve.imagen.addEventListener("load", cargarnueve1);
 }
 
-signo.imagen.addEventListener("load", dibujarmas);
-
+if(sig==0){
+  z=x+y;
+  mas.imagen.addEventListener("load", dibujarmas);
+}
+if(sig==1){
+  z=x-y;
+  menos.imagen.addEventListener("load", dibujarmenos);
+}
 function cargaruno() {
   uno.cargaOk = true;
   dibujar1(uno);
@@ -284,8 +284,11 @@ function dibujar2(n) {
 }
 
 function dibujarmas() {
-  papel.drawImage(signo.imagen, 520, 220);
+  papel.drawImage(mas.imagen, 520, 220);
+}
 
+function dibujarmenos() {
+  papel.drawImage(menos.imagen, 520, 220);
 }
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo) {
