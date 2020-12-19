@@ -286,7 +286,7 @@ function dibujar2(n) {
 function dibujarmas() {
   papel.drawImage(mas.imagen, 520, 220);
 }
-s
+
 function dibujarmenos() {
   papel.drawImage(menos.imagen, 520, 220);
 }
