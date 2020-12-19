@@ -96,7 +96,11 @@ if(sig==1){
   var z = x - y;
 }
 
+mas.imagen = new Image();
+mas.imagen.src = mas.url;
 
+menos.imagen = new Image();
+menos.imagen.src = menos.url;
 
 uno.imagen = new Image();
 uno.imagen.src = uno.url;
@@ -131,6 +135,8 @@ correcto.imagen.src = correcto.url;
 
 incorrecto.imagen = new Image();
 incorrecto.imagen.src = incorrecto.url;
+
+
 
 if (x == 1) {
   uno.imagen.addEventListener("load", cargaruno);
