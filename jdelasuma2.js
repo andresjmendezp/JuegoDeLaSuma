@@ -80,6 +80,7 @@ x = aleatorio(1, 9);
 y = aleatorio(1, x-1);
 
 var r;
+var z;
 
 sig=aleatorio(0,1)
 
@@ -183,9 +184,11 @@ if (y == 9) {
 }
 
 if(sig==0){
+  z=x+y;
   mas.imagen.addEventListener("load", dibujarmas);
 }
 if(sig==1){
+  z=x-y;
   menos.imagen.addEventListener("load", dibujarmenos);
 }
 function cargaruno() {
